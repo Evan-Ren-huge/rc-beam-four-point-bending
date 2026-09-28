@@ -53,7 +53,7 @@ benchmarks, not matched ablations.
 Every model consumes the same case-level mesh and loading condition and rolls
 over the same 21 normalized loading-progress frames. Every model is eventually
 scored against native nodal displacement, native element stress/PEEQ, and the
-global force history. The manuscript uses 156 training, 19 validation and 21 test cases.
+global force history.
 
 ## References
 

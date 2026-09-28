@@ -23,9 +23,8 @@ RCBeam3D-FourPointBending/
 └── LICENSE.txt
 ```
 
-The archive contains 196 `<case_id>.h5` files. `cases.csv` records
-the measured inventory and keeps every split value as `unassigned` until the
-exact train/validation/test case-id lists are approved.
+`cases.csv` records the measured inventory and keeps every split value as
+`unassigned` until the exact train/validation/test case-id lists are approved.
 
 ## HDF5 conventions
 
@@ -34,11 +33,10 @@ exact train/validation/test case-id lists are approved.
 - Force is stored in N.
 - PEEQ is dimensionless.
 - Connectivity stores zero-based row indices.
-- Each file contains one complete 21-frame case.
+- Each file contains one complete loading trajectory.
 
 Do not create `LICENSE.txt` by guessing a license; the rights holder must
 supply the applicable terms.
 
 
-The manuscript partition is **156 train / 19 validation / 21 test**.
 Case-id split lists are not bundled in this preview.

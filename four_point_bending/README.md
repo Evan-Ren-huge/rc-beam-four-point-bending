@@ -71,16 +71,12 @@ loading blocks while retaining the documented beam and support configuration.
 - Materials: Concrete Damaged Plasticity for concrete and isotropic
   elastic-plastic reinforcement; perfect bond through an embedded-region
   constraint.
-- Timelines: 21 aligned frames at normalised loading progress
-  `p = 0.00, 0.05, ..., 1.00`.
+- Timeline: normalised loading progress.
 - Fields: nodal displacement, element von Mises stress, element PEEQ, global
   vertical reaction force and prescribed loading-head displacement.
 - File format: one HDF5 (`.h5`) file per loading case, using strict SI units
   (m, Pa and N) and zero-based connectivity.
-- Dataset: 196 HDF5 case files.
-- Manuscript split: 156 training, 19 validation and 21 test cases.
-- HDF5 archive measured size: 0.697 GB; schema `0.2.0`; dataset id
-  `RC-Beam-4Point`.
+- HDF5 schema `0.2.0`; dataset id `RC-Beam-4Point`.
 - Provenance: parametric Abaqus campaign based on the physical CL30
   four-point-bending experiment reported in [1].
 - Data license: to be specified with the dataset download.
@@ -91,7 +87,7 @@ Autoregressive load-progress-conditioned prediction of the full nonlinear beam
 response. Given the fixed finite-element mesh, the two loading-region locations,
 the unloaded initial state and the normalised progress sequence, a method rolls
 out nodal displacement, element-wise von Mises stress, element-wise PEEQ and the
-global vertical reaction-force history through the 21 stored frames.
+global vertical reaction-force history through the stored frames.
 
 The benchmark is case-based: all frames belonging to one loading configuration
 must remain in the same train, validation or test split. Models are evaluated
