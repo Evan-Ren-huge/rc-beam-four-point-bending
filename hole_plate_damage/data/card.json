@@ -1,0 +1,58 @@
+{
+  "dataset_id": "HolePlate2D-Damage-800",
+  "presentation_version": "0.2.0-preview",
+  "source_batches": [
+    "hole_plate_2d_damage_full_edge_100",
+    "hole_plate_2d_damage_full_edge_next_200",
+    "hole_plate_2d_damage_full_edge_next_500"
+  ],
+  "case_count": 800,
+  "split_counts": {
+    "train": 560,
+    "validation": 80,
+    "id_test": 80,
+    "ood_test": 80
+  },
+  "source_format": "NPZ",
+  "units": {
+    "length": "mm",
+    "force": "N",
+    "stress": "MPa",
+    "energy": "N mm"
+  },
+  "frames_per_case": 101,
+  "nodes_per_case": 1684,
+  "elements_per_case": 1580,
+  "element_type": "CPS4R",
+  "geometry_ranges": {
+    "L_mm": [
+      160.38697285565996,
+      239.5815990800883
+    ],
+    "W_mm": [
+      80.44871083925484,
+      119.91670707831979
+    ],
+    "t_mm": [
+      8.056782260605171,
+      11.984753195918742
+    ],
+    "R_mm": [
+      6.9331387027393365,
+      17.63086641979015
+    ],
+    "R_over_W": [
+      0.08131723084422678,
+      0.14975762270389464
+    ]
+  },
+  "loading": "FULL_RIGHT_EDGE_UNIFORM_U1",
+  "final_nominal_strain": 0.015,
+  "material_calibration": "synthetic; not calibrated to a specific alloy",
+  "license": null,
+  "public_data_url": null,
+  "model_results_included": false,
+  "evaluation_protocol": "suggested metrics only; not implemented in this visualization package",
+  "style_reference": "https://github.com/qilinli/StructBench",
+  "official_structbench_benchmark": false
+}

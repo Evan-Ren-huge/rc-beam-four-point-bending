@@ -1,0 +1,27 @@
+{
+  "case_count": 200,
+  "damaged_case_count": 200,
+  "deleted_case_count": 196,
+  "deleted_element_count_range": [
+    0,
+    30
+  ],
+  "max_allsd_allie_ratio": 0.2535342431879324,
+  "max_allsd_allie_ratio_after_10pct": 0.03293617631990287,
+  "max_damage_range": [
+    0.7465261220932007,
+    0.9999899864196777
+  ],
+  "max_final_allsd_allie_ratio": 0.03293617631990287,
+  "peak_tensile_force_n_range": [
+    159856.8193359375,
+    307787.5029296875
+  ],
+  "split_counts": {
+    "id_test": 20,
+    "ood_test": 20,
+    "train": 140,
+    "validation": 20
+  },
+  "status": "PASS"
+}

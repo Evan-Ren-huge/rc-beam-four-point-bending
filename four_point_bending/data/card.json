@@ -1,0 +1,123 @@
+{
+  "schema_version": "draft-0.1",
+  "registry_name": "rc_beam_four_point_bending",
+  "display_name": "RCBeam3D-FourPointBending",
+  "status": "dataset preview; manuscript split documented",
+  "solver": {
+    "name": "Abaqus",
+    "procedure": "Static General",
+    "geometric_nonlinearity": true
+  },
+  "structure": {
+    "type": "reinforced-concrete beam",
+    "loading": "displacement-controlled four-point bending",
+    "dimensions_mm": [
+      150,
+      250,
+      2700
+    ],
+    "clear_span_mm": 2400,
+    "concrete_element": "C3D8R",
+    "reinforcement_element": "T3D2",
+    "global_mesh_size_mm": 25,
+    "nodes_per_case": 8393,
+    "solid_elements_per_case": 6480
+  },
+  "campaign": {
+    "paper_reported_cases": 196,
+    "candidate_h5_files": 196,
+    "candidate_h5_bytes": 697023625,
+    "missing_numeric_indices": [
+      7
+    ],
+    "count_status": "196 canonical HDF5 cases"
+  },
+  "file_format": {
+    "container": "HDF5",
+    "extension": ".h5",
+    "schema_version": "0.2.0",
+    "organization": "one complete loading case per file",
+    "units": "SI",
+    "connectivity_indexing": "zero-based"
+  },
+  "parameterization": {
+    "right_block_parameter": "a",
+    "left_block_parameter": "b",
+    "right_baseline_center_mm": 1750,
+    "left_baseline_center_mm": 950,
+    "offset_min_mm": -200,
+    "offset_max_mm": 200,
+    "grid_step_mm": 25,
+    "center_spacing_formula_mm": "800 + a - b"
+  },
+  "trajectory": {
+    "frames": 21,
+    "coordinate": "normalized loading progress",
+    "levels": [
+      0.0,
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.25,
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95,
+      1.0
+    ]
+  },
+  "targets": [
+    {
+      "path": "response/node/displacement",
+      "location": "node",
+      "unit": "m"
+    },
+    {
+      "path": "response/element/solid/stress_scalar",
+      "location": "element",
+      "unit": "Pa"
+    },
+    {
+      "path": "response/element/solid/peeq",
+      "location": "element",
+      "unit": "1"
+    },
+    {
+      "path": "response/global/rf2",
+      "location": "global",
+      "unit": "N"
+    },
+    {
+      "path": "response/global/head_u2",
+      "location": "global",
+      "unit": "m"
+    }
+  ],
+  "methods": [
+    "dual_graph_gconvgru",
+    "single_graph_gconvgru",
+    "cgn_n",
+    "cgn_e"
+  ],
+  "split": {
+    "type": "case-level",
+    "train": 156,
+    "validation": 19,
+    "test": 21,
+    "source": "manuscript",
+    "case_id_lists": "not included in this preview"
+  },
+  "license": "TBD",
+  "results": {}
+}

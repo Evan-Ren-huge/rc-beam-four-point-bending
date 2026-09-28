@@ -1,0 +1,30 @@
+{
+  "case_count": 800,
+  "unique_source_case_count": 800,
+  "completed_case_count": 800,
+  "damaged_case_count": 800,
+  "deleted_case_count": 791,
+  "deleted_element_count_range": [
+    0,
+    30
+  ],
+  "peak_tensile_force_n_range": [
+    156292.3798828125,
+    329452.0341796875
+  ],
+  "split_counts": {
+    "train": 560,
+    "validation": 80,
+    "id_test": 80,
+    "ood_test": 80
+  },
+  "source_batches": {
+    "hole_plate_2d_damage_full_edge_100": 100,
+    "hole_plate_2d_damage_full_edge_next_200": 200,
+    "hole_plate_2d_damage_full_edge_next_500": 500
+  },
+  "status": "PASS",
+  "max_allsd_allie_ratio": 0.3579479157406252,
+  "max_allsd_allie_ratio_after_10pct": 0.04703075801547493,
+  "max_final_allsd_allie_ratio": 0.04281169425031121
+}
